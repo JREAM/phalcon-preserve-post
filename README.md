@@ -1,15 +1,28 @@
-# Phalcon Preserve Post
+Phalcon Preserve Post
+---
 
-This is just a simple way to preserve form data in 3 steps.
+Preserve **Form Data** after a **POST and Redirect**. We are using the standard [Phalcon Framework](http://phalconphp.com). 
 
-- This uses plain $_SESSION data
-- $_SESSION data is reset once viewed
-- Your Session must be started before-hand (Phalcon Session)
+---
 
-I did not want to use the Form libraries for forms, nor did I want to use the
-flash Messages container because this is automatic and quite easy.
 
-If you find a better way to do this let me know!
+**Setup**
+- The setup requires **2** simple steps, or optionally **3**.
+- Look at the `Example.php` file, you have to modify your Public Bootstrap, and add an Event Listener for the Dispatcher. 
+- Optionally you can add a custom function for fetching the data, which I personally keep in a separate `functions.php` file.
+
+
+**Notes**
+- This uses plain `$_SESSION` data
+- `$_SESSION` data is **reset** once viewed
+- Your **Session must be started** before-hand (Phalcon Session)
+
+**Why**
+- I did not want to use the Form libraries for forms
+- I want to use the flash Messages container because It's not automatic. (I don't think)
+
+**Help**
+- If you find a better way to do this let me know!
 
 ----
-http://jream.com
+From [JREAM](http://jream.com)
